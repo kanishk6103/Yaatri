@@ -1,9 +1,10 @@
 import { View, Text, TouchableOpacity, Pressable, ScrollView } from 'react-native'
 import React from 'react'
-import TrainStatus from "../../assets/Components/TrainStatus"
+// import TrainStatus from "../../assets/Components/Trainstatus"
 import { addDays, formatDate, formatDuration } from "../../utils/dateConverter.js"
 import DottedLineCenter from '../../assets/Components/DottedLineCenter.jsx'
 import BoxComponent from './BoxComponent.jsx'
+import TrainStatusInfo from '../../assets/Components/TrainStatusInfo.jsx'
 const SearchResult = ({ data }) => {
     const { train_name, train_number, from_station_name, to_station_name, from_std, to_std, from_day, to_day, train_date, duration, class_type, run_days } = data;
     const days = (to_day - from_day)
@@ -21,7 +22,7 @@ const SearchResult = ({ data }) => {
                     </View>
                     <Pressable className="px-2 py-1">
                         <View className="flex flex-row gap-1 text-SecondaryFont bg-InputBG px-2 py-1 rounded-md items-center">
-                            <Text className=""><TrainStatus /></Text>
+                            <Text className=""><TrainStatusInfo /></Text>
                             <Text className="text-SecondaryFont">Train Status</Text>
                         </View>
                     </Pressable>
