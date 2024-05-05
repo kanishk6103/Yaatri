@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import DummyData from "./DummyData";
 import StatusCard from "./StatusCard";
-import Trainstatus from "../../assets/components/Trainstatus";
+import TrainStatusInfo from "../../assets/Components/TrainStatusInfo";
 const ResultBox = () => {
   const myString = DummyData.data.Duration;
   const [hour, minute] = myString.split(":");
@@ -37,7 +37,7 @@ const ResultBox = () => {
         <Text className="text-textWhite text-sm font-semibold">{`${DummyData.data.TrainName} (${DummyData.data.TrainNo})`}</Text>
         <View className="flex flex-row items-center py-1 px-2 space-x-1 rounded-md bg-borderColor">
           <Text className="">
-            <Trainstatus />
+            <TrainStatusInfo />
           </Text>
           <Text className="text-[8px] font-normal text-SecondaryFont">
             Train Status
