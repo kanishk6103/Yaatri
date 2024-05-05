@@ -1,10 +1,11 @@
 import React from 'react'
-
-const BoxComponent = ({ text, color }) => {
+import { Text } from "react-native"
+const BoxComponent = ({ text, active }) => {
     return (
-        <div className=''>
+
+        <Text className={'px-3 py-2 rounded text-sm font-bold text-OffWhite bg-InputBG'}>
             {text}
-        </div>
+        </Text>
     )
 }
 
