@@ -10,7 +10,7 @@ const PNRCheckScreen = ({ navigation }) => {
         setclicked(true);
     }
   return (
-    <View className="w-[390px] h-[844px] bg-Background">
+    <View className="w-screen h-screen bg-Background">
       <View className="mx-8">
         <Text className="text-lg font-semibold text-textWhite my-5">
           Enter PNR Number
