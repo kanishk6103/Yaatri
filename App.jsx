@@ -11,7 +11,7 @@ NativeWindStyleSheet.setOutput({
 
 export default function App() {
   return (
-    <SafeAreaView className="flex-1 bg-[#ffffff]">
+    <SafeAreaView className="flex-1 bg-[#000000]">
       <AppNavigator />
     </SafeAreaView>
   );

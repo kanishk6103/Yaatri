@@ -1,11 +1,13 @@
 // tailwind.config.js
 
 module.exports = {
-  content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}", "./screens/**/**/*.{js,jsx,ts,tsx}"],
+  content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}", "./screens/**/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./components/**/**/*.{js,jsx,ts,tsx}",
+    "./navigation/**/*.{js,jsx,ts,tsx}",
+    "./screens/**/*.{js,jsx,ts,tsx}",],
   theme: {
     extend: {
       width: {
-        button: "166px",
+        button: "36px",
       },
       padding: {
         findTrainsButton: "8px 12px",
@@ -21,6 +23,7 @@ module.exports = {
         Rejection: "#D84F4F",
         SecondaryFont: "#8F8F8F",
         PlaceholderColor: "#A8A8A8",
+        InputBG: "#282B32"
       },
       fontFamily: {
         sans: ['Poppins', "sans-serif"],

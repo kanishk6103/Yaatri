@@ -10,9 +10,9 @@ const Stack = createNativeStackNavigator();
 const MyStack = () => {
     return (
         <Stack.Navigator
-            initialRouteName="Home"
+            initialRouteName="Yaatri"
         >
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Yaatri" component={HomeScreen} />
             <Stack.Screen
                 name="PNR"
                 component={PNRCheckScreen}
