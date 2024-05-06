@@ -23,7 +23,7 @@ data = [
         name: "Seat Availability",
         description: "Find vacant seats in a jiffy",
         svg: <Seat />,
-        navigate: "PNR",
+        navigate: "SeatAvailability",
     },
     {
         sno: 4,
