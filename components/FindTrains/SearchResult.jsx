@@ -17,7 +17,7 @@ const SearchResult = ({ data }) => {
             <View className="w-max mx-6 bg-Dark px-3 py-2 rounded-2xl">
                 <View className="flex flex-row justify-between w-full items-center border-b-slate-600">
                     <View className="flex flex-row gap-1 items-center">
-                        <Text className="text-OffWhite font-semibold text-sm">{train_name.length > 8 ? train_name.slice(0, train_name.length / 4) + '...' : train_name}</Text>
+                        <Text className="text-OffWhite font-semibold text-sm">{train_name.length > 8 ? train_name.slice(0, train_name.length / 3) + '...' : train_name}</Text>
                         <Text className="text-OffWhite font-semibold text-sm">({train_number})</Text>
                     </View>
                     <Pressable className="px-2 py-1">
@@ -33,7 +33,7 @@ const SearchResult = ({ data }) => {
                         {/* Time */}
                         <View><Text className="text-OffWhite text-xs">{from_std}</Text></View>
                         {/* Source Station */}
-                        <View><Text className="text-SecondaryFont text-xs">{from_station_name.length > 16 ? from_station_name.slice(0, from_station_name.length / 2) + '...' : from_station_name}</Text></View>
+                        <View><Text className="text-SecondaryFont text-xs">{from_station_name.length > 16 ? from_station_name.slice(0, from_station_name.length / 1.8) + '...' : from_station_name}</Text></View>
                         {/* Date */}
                         <View><Text className="text-SecondaryFont text-xs">{formattedDate}</Text></View>
                     </View>
