@@ -1,9 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
-import DummyData from "./DummyData";
+// import DummyData from "./DummyData";
 import StatusCard from "./StatusCard";
 import TrainStatusInfo from "../../assets/Components/TrainStatusInfo";
-const ResultBox = () => {
+const ResultBox = ({result}) => {
+  console.log(result);
+  const DummyData=result;
+  if(!result){
+    return;
+  }
   const myString = DummyData.data.Duration;
   const [hour, minute] = myString.split(":");
   var days = [

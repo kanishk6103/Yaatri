@@ -18,7 +18,6 @@ const TrainRunningScreen = ({ navigation }) => {
                 </Text>
                 <Input value={"TRAIN"} />
             </View>
-
             <LiveStatus />
         </View>
     );
