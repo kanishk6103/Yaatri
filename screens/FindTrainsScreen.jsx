@@ -7,9 +7,9 @@ import Exchange from '../components/FindTrains/Exchange'
 import SearchResult from '../components/FindTrains/SearchResult'
 import { sample } from '../components/FindTrains/sampleResponse'
 import DottedLine from '../assets/Components/DottedLine'
-
 export default function FindTrainsScreen({ navigation }) {
-    const [data, setData] = useState(sample.data)
+    const [data, setData] = useState(null)
+    // const [data, setData] = useState(sample.data)
     const [fromValue, setFromValue] = useState('');
     const [toValue, setToValue] = useState('');
     const [date, setDate] = useState('')
@@ -33,7 +33,7 @@ export default function FindTrainsScreen({ navigation }) {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': "API_KEY",
+                'X-RapidAPI-Key': ``,
                 'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
             }
         };
@@ -76,9 +76,9 @@ export default function FindTrainsScreen({ navigation }) {
 
             <ScrollView className="mt-2 mb-24">
                 {
-                    data.map((singleData, index) => {
+                    data ? (data.map((singleData, index) => {
                         return <SearchResult data={singleData} key={index} />
-                    })
+                    })) : (<View className="flex items-center justify-center my-12"><Text className="text-LightDark text-xs font-black">Your search results will appear here.</Text></View>)
                 }
             </ScrollView>
         </View>

@@ -36,7 +36,7 @@ export function formatDuration(inputDuration) {
     }
     if (minutesStr > 0) {
         if (formattedDuration !== '') {
-            formattedDuration += ', ';
+            formattedDuration += ' ';
         }
         formattedDuration += `${minutesStr} m`;
     }
