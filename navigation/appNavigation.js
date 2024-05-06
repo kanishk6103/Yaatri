@@ -6,6 +6,7 @@ import PNRCheckScreen from "../screens/PNRCheckScreen";
 import TrainRunningScreen from "../screens/TrainRunningScreen.jsx";
 import FindTrainsScreen from "../screens/FindTrainsScreen.jsx";
 import { useFonts, Poppins_200ExtraLight } from '@expo-google-fonts/poppins';
+import SeatAvailability from "../screens/SeatAvailability.js";
 const Stack = createNativeStackNavigator();
 const MyStack = () => {
     const [fontsLoaded] = useFonts({
@@ -33,6 +34,7 @@ const MyStack = () => {
             <Stack.Screen name="PNR" component={PNRCheckScreen} />
             <Stack.Screen name="TrainStatus" component={TrainRunningScreen} />
             <Stack.Screen name="FindTrains" component={FindTrainsScreen} />
+            <Stack.Screen name="SeatAvailability" component={SeatAvailability} />
         </Stack.Navigator>
     );
 };
