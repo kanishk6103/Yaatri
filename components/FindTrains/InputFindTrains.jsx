@@ -1,7 +1,8 @@
 import { View, Text, TextInput, Button, Pressable, Platform } from 'react-native'
 import React, { useState } from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
-const InputFindTrains = ({ label, placeholder, type }) => {
+import { apiDateFormat } from '../../utils/dateConverter';
+const InputFindTrains = ({ label, placeholder, type, value, onChangeText, onDateChange }) => {
     const [text, setText] = useState('');
     const [date, setDate] = useState(new Date());
     const [showPicker, setShowPicker] = useState(false)
@@ -13,9 +14,11 @@ const InputFindTrains = ({ label, placeholder, type }) => {
         if (type == "set") {
             const currentDate = selectedDate;
             setDate(currentDate)
+            const formattedDate = apiDateFormat(currentDate)
             if (Platform.OS === "android") {
                 toggleDatePicker();
-                setDoj(currentDate.toDateString())
+                setDoj(formattedDate)
+                onDateChange(formattedDate);
             }
         } else {
             toggleDatePicker();
@@ -28,8 +31,8 @@ const InputFindTrains = ({ label, placeholder, type }) => {
                 <TextInput
                     className="rounded-lg px-3 py-2 bg-InputBG text-md text-OffWhite"
                     placeholder={placeholder}
-                    onChangeText={newText => setText(newText)}
-                    defaultValue={text}
+                    onChangeText={onChangeText}
+                    value={value}
                     placeholderTextColor={"#A8A8A8"}
                 />
                 :

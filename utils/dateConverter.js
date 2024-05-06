@@ -60,6 +60,14 @@ export function addDays(inputDate, daysToAdd) {
     return formattedDate;
 }
 
+export function apiDateFormat(dateString) {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const day = ('0' + date.getDate()).slice(-2);
+    return `${year}-${month}-${day}`;
+}
+
 // Example usage
 // const train_date = "26-05-2023";
 // const formattedDate = formatDate(train_date);

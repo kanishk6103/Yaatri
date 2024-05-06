@@ -24,11 +24,11 @@ module.exports = {
         SecondaryFont: "#8F8F8F",
         PlaceholderColor: "#A8A8A8",
         InputBG: "#282B32",
-        textWhite:"#FFFFFF",
-        borderColor:"#282B32"
+        textWhite: "#FFFFFF",
+        borderColor: "#282B32"
       },
       fontFamily: {
-        sans: ['Poppins', "sans-serif"],
+        poppins: ['Poppins'],
       },
     },
   },

@@ -5,9 +5,16 @@ import HomeScreen from "../screens/HomeScreen";
 import PNRCheckScreen from "../screens/PNRCheckScreen";
 import TrainRunningScreen from "../screens/TrainRunningScreen.jsx";
 import FindTrainsScreen from "../screens/FindTrainsScreen.jsx";
-// const Tab = createBottomTabNavigator();
+import { useFonts, Poppins_200ExtraLight } from '@expo-google-fonts/poppins';
 const Stack = createNativeStackNavigator();
 const MyStack = () => {
+    const [fontsLoaded] = useFonts({
+        Poppins_200ExtraLight, // Load Poppins font with required weight
+    });
+
+    if (!fontsLoaded) {
+        return null; // Render nothing until the font is loaded
+    }
     return (
         <Stack.Navigator
             initialRouteName="Home"
@@ -17,12 +24,12 @@ const MyStack = () => {
                 },
                 headerTintColor: "#ffffff",
                 headerTitleStyle: {
-                    fontWeight: "200",
+                    fontFamily: 'Poppins_200ExtraLight',
                     fontSize: 32,
                 },
             }}
         >
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Yaatri" component={HomeScreen} />
             <Stack.Screen name="PNR" component={PNRCheckScreen} />
             <Stack.Screen name="TrainStatus" component={TrainRunningScreen} />
             <Stack.Screen name="FindTrains" component={FindTrainsScreen} />
