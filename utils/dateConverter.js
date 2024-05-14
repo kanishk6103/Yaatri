@@ -68,6 +68,30 @@ export function apiDateFormat(dateString) {
     return `${year}-${month}-${day}`;
 }
 
+// Pass timestamp in millis
+export const convertCurrentDate = (timestampinMillis) => {
+    let dateFullFormat = new Date(timestampinMillis);
+    let timestamp = dateFullFormat;
+    let date = new Date(timestamp);
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    let formattedDate = year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day;
+    return formattedDate;
+}
+
+// Pass the dates in "2024-05-14" format
+export const differenceFromCurrent = (current, timestamp) => {
+    // Convert dates to milliseconds since Unix epoch
+    let millisPerDay = 24 * 60 * 60 * 1000;
+    let timestamp1 = new Date(current).getTime();
+    let timestamp2 = new Date(timestamp).getTime();
+
+    // Calculate the difference in days
+    let differenceInDays = Math.round(Math.abs((timestamp1 - timestamp2) / millisPerDay));
+    return differenceInDays;
+}
+
 // Example usage
 // const train_date = "26-05-2023";
 // const formattedDate = formatDate(train_date);

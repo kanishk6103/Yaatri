@@ -53,8 +53,8 @@ export default function FindTrainsScreen({ navigation }) {
     };
 
     return (
-        <View className="h-screen bg-black">
-            <View className="mx-6">
+        <View className="h-screen bg-black px-6">
+            <View className="">
                 <View className="flex flex-col space-y-2 justify-evenly my-2">
                     <View>
                         <InputFindTrains label={"From"} placeholder={"Enter source station.."} type={"Text"} value={fromValue} onChangeText={(text) => setFromValue(text.toUpperCase())} />

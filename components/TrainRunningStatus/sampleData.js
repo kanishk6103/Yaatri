@@ -1,4 +1,4 @@
-const sampleDate = {
+export const sampleData = {
     "status": true,
     "message": "Success",
     "timestamp": 1715363996376,

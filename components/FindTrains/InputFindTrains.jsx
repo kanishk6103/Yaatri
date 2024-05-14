@@ -26,7 +26,7 @@ const InputFindTrains = ({ label, placeholder, type, value, onChangeText, onDate
     }
     return (
         <View className="my-4">
-            <Text className="text-xs text-SecondaryFont">{label}</Text>
+            <Text className="text-xs text-SecondaryFont my-1 font-bold">{label}</Text>
             {type === "Text" ?
                 <TextInput
                     className="rounded-lg px-3 py-2 bg-InputBG text-md text-OffWhite"
@@ -36,16 +36,25 @@ const InputFindTrains = ({ label, placeholder, type, value, onChangeText, onDate
                     placeholderTextColor={"#A8A8A8"}
                 />
                 :
-                <>
-                    {<Pressable onPress={toggleDatePicker}>
-                        <TextInput className="rounded-lg px-3 py-2 bg-InputBG text-md text-OffWhite"
-                            placeholder={placeholder}
-                            defaultValue={text}
-                            placeholderTextColor={"#A8A8A8"} value={doj} onChangeText={setDoj} editable={false}
-                        />
-                    </Pressable>}
-                    {showPicker && <DateTimePicker mode='date' display='spinner' value={date} onChange={onChange} />}
-                </>
+                type === "Number" ?
+                    <TextInput
+                        className="rounded-lg px-3 py-2 bg-InputBG text-md text-OffWhite"
+                        placeholder={placeholder}
+                        onChangeText={onChangeText}
+                        value={value}
+                        placeholderTextColor={"#A8A8A8"}
+                        keyboardType="numeric"
+                    /> :
+                    <>
+                        {<Pressable onPress={toggleDatePicker}>
+                            <TextInput className="rounded-lg px-3 py-2 bg-InputBG text-md text-OffWhite"
+                                placeholder={placeholder}
+                                defaultValue={text}
+                                placeholderTextColor={"#A8A8A8"} value={doj} onChangeText={setDoj} editable={false}
+                            />
+                        </Pressable>}
+                        {showPicker && <DateTimePicker mode='date' display='spinner' value={date} onChange={onChange} />}
+                    </>
             }
         </View>
     )
