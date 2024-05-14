@@ -1,13 +1,17 @@
 import { View, Text, ScrollView, SafeAreaView } from "react-native";
 import React from "react";
+import PartialStatus from "./PartialStatus";
 
-const LiveStatus = () => {
+const LiveStatus = ({ data }) => {
     return (
-
-        <ScrollView className="flex h-full bg-red-50 my-12 w-full">
-
+        <ScrollView className="bg-Dark w-full px-2 my-2 mt-4 rounded-xl">
+            {/* <PartialStatus stationArray={data.previous_stations} type={"previous"} /> */}
+            <PartialStatus stationArray={data.route} type={"previous"} />
+            {/* <View>
+                <></>
+            </View>
+            <PartialStatus stationArray={data.upcoming_stations} type={"upcoming"} /> */}
         </ScrollView>
-
     );
 };
 

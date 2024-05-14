@@ -30,6 +30,16 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins'],
       },
+      animation: {
+        fade: 'fadeOut .5s ease-in-out',
+      },
+
+      keyframes: {
+        fadeOut: {
+          from: { opacity: 1 },
+          to: { opacity: 0 },
+        },
+      },
     },
   },
   plugins: [],

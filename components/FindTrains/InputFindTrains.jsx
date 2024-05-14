@@ -25,7 +25,7 @@ const InputFindTrains = ({ label, placeholder, type, value, onChangeText, onDate
         }
     }
     return (
-        <View className="my-4">
+        <View className="my-3">
             <Text className="text-xs text-SecondaryFont my-1 font-bold">{label}</Text>
             {type === "Text" ?
                 <TextInput
@@ -33,7 +33,7 @@ const InputFindTrains = ({ label, placeholder, type, value, onChangeText, onDate
                     placeholder={placeholder}
                     onChangeText={onChangeText}
                     value={value}
-                    placeholderTextColor={"#A8A8A8"}
+                    placeholderTextColor={"#6B6B6B"}
                 />
                 :
                 type === "Number" ?
@@ -42,7 +42,7 @@ const InputFindTrains = ({ label, placeholder, type, value, onChangeText, onDate
                         placeholder={placeholder}
                         onChangeText={onChangeText}
                         value={value}
-                        placeholderTextColor={"#A8A8A8"}
+                        placeholderTextColor={"#6B6B6B"}
                         keyboardType="numeric"
                     /> :
                     <>
@@ -50,7 +50,7 @@ const InputFindTrains = ({ label, placeholder, type, value, onChangeText, onDate
                             <TextInput className="rounded-lg px-3 py-2 bg-InputBG text-md text-OffWhite"
                                 placeholder={placeholder}
                                 defaultValue={text}
-                                placeholderTextColor={"#A8A8A8"} value={doj} onChangeText={setDoj} editable={false}
+                                placeholderTextColor={"#6B6B6B"} value={doj} onChangeText={setDoj} editable={false}
                             />
                         </Pressable>}
                         {showPicker && <DateTimePicker mode='date' display='spinner' value={date} onChange={onChange} />}
