@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import Card from "../components/Home/Card";
 import data from "../components/Home/data";
-import { useFonts, Poppins_200ExtraLight } from '@expo-google-fonts/poppins';
+import { useFonts, Poppins_200ExtraLight } from "@expo-google-fonts/poppins";
 const HomeScreen = () => {
     const [fontsLoaded] = useFonts({
         Poppins_200ExtraLight, // Load Poppins font with required weight

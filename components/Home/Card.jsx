@@ -9,11 +9,11 @@ const Card = ({ props }) => {
         <Pressable
             onPress={() => navigation.navigate(props.navigate)}
             className="bg-Dark w-40 h-36 flex-col justify-start items-start m-2 p-3 inline-flex border border-black rounded-lg"
-        // style={({ pressed }) => [
-        //     {
-        //         backgroundColor: pressed ? '#2475EE' : '#1D1F24',
-        //     },
-        // ]}
+            // style={({ pressed }) => [
+            //     {
+            //         backgroundColor: pressed ? '#2475EE' : '#1D1F24',
+            //     },
+            // ]}
         >
             <View className=" bg-LightDark rounded-lg mb-3 w-16 h-14 flex justify-center items-center">
                 <Text>{props.svg}</Text>

@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Input from "../components/Input";
 import ResultBox from "../components/PNRCheck/ResultBox";
 import InputFindTrains from "../components/FindTrains/InputFindTrains";
+import DummyData from "../components/PNRCheck/DummyData.js"
+
 const PNRCheckScreen = ({ navigation }) => {
   const [result, setResult] = useState(null);
   const [PNR, setPNR] = useState("")
@@ -18,7 +20,7 @@ const PNRCheckScreen = ({ navigation }) => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": ``,
+        "X-RapidAPI-Key": `5c5b4a5b67mshe87e27640303d24p1c4638jsn0a2229b45028`,
         "X-RapidAPI-Host": "irctc1.p.rapidapi.com",
       },
     };

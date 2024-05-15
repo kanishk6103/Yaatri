@@ -2,6 +2,7 @@ import PNR from "../../assets/SVG/PNR";
 import TrainLiveStatus from "../../assets/SVG/TrainLiveStatus";
 import Seat from "../../assets/SVG/Seat";
 import FindTrains from "../../assets/SVG/FindTrains";
+import Contributors from "../../assets/SVG/Contributors";
 
 data = [
     {
@@ -31,6 +32,13 @@ data = [
         description: "Find trains in an instant",
         svg: <FindTrains />,
         navigate: "Find Trains",
+    },
+    {
+        sno: 5,
+        name: "Contributors",
+        description: "People who developed this application",
+        svg: <Contributors />,
+        navigate: "Contributors",
     },
 ];
 

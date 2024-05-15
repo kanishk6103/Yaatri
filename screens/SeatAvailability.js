@@ -6,7 +6,11 @@ export class SeatAvailability extends Component {
         return (
             <View className="flex justify-center items-center w-screen h-screen bg-black">
                 <Text className="text-4xl text-white">
-                    Coming Soon...
+                    (Never) Coming{" "}
+                    <Text style={{ textDecorationStyle: "strikethrough" }}>
+                        Soon
+                    </Text>
+                    ....
                 </Text>
             </View>
         );
