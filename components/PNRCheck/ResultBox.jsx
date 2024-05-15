@@ -3,10 +3,10 @@ import React from "react";
 // import DummyData from "./DummyData";
 import StatusCard from "./StatusCard";
 import TrainStatusInfo from "../../assets/Components/TrainStatusInfo";
-const ResultBox = ({result}) => {
+const ResultBox = ({ result }) => {
   console.log(result);
-  const DummyData=result;
-  if(!result){
+  const DummyData = result;
+  if (!result) {
     return;
   }
   const myString = DummyData.data.Duration;
@@ -35,9 +35,9 @@ const ResultBox = ({result}) => {
     "December",
   ];
   var sourceData = new Date(DummyData.data.SourceDoj);
-  var destinationData= new Date(DummyData.data.DestinationDoj);
+  var destinationData = new Date(DummyData.data.DestinationDoj);
   return (
-    <View className="w-[333px] shrink-0 rounded-3xl bg-Dark">
+    <View className="w-full mx-0 px-0 shrink-0 rounded-3xl bg-Dark">
       <View className="flex flex-row justify-between items-center py-1 px-2 gap-1 my-2 mx-1">
         <Text className="text-textWhite text-sm font-semibold">{`${DummyData.data.TrainName} (${DummyData.data.TrainNo})`}</Text>
         <View className="flex flex-row items-center py-1 px-2 space-x-1 rounded-md bg-borderColor">
