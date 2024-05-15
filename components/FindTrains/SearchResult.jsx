@@ -5,12 +5,16 @@ import { addDays, formatDate, formatDuration } from "../../utils/dateConverter.j
 import DottedLineCenter from '../../assets/Components/DottedLineCenter.jsx'
 import BoxComponent from './BoxComponent.jsx'
 import TrainStatusInfo from '../../assets/Components/TrainStatusInfo.jsx'
-const SearchResult = ({ data }) => {
+
+const SearchResult = ({ data, nav }) => {
     const { train_name, train_number, from_station_name, to_station_name, from_std, to_std, from_day, to_day, train_date, duration, class_type, run_days } = data;
     const days = (to_day - from_day)
     const formattedDate = formatDate(train_date)
     const formattedDuration = formatDuration(duration)
     const arrivalDate = addDays(train_date, days)
+    // const handleTrainStatus = () => {
+    //     nav.navigate("Train Status", { paramKey: train_number })
+    // }
     return (
         <View className="w-full mt-4">
             {/* Train Name, Number and Status Button */}
@@ -20,7 +24,7 @@ const SearchResult = ({ data }) => {
                         <Text className="text-OffWhite font-semibold text-sm max-w-[75%] line-clamp-1">{train_name.length > 20 ? train_name.slice(0, train_name.length / 3) + '...' : train_name}</Text>
                         <Text className="text-OffWhite font-semibold text-sm">({train_number})</Text>
                     </View>
-                    <Pressable className="px-2 py-1">
+                    <Pressable className="px-2 py-1" onPress={() => { }}>
                         <View className="flex flex-row gap-1 text-SecondaryFont bg-InputBG px-2 py-1 rounded-md items-center">
                             <Text className=""><TrainStatusInfo /></Text>
                             <Text className="text-SecondaryFont">Train Status</Text>

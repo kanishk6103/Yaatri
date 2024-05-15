@@ -31,10 +31,10 @@ const MyStack = () => {
             }}
         >
             <Stack.Screen name="Yaatri" component={HomeScreen} />
-            <Stack.Screen name="PNR" component={PNRCheckScreen} />
-            <Stack.Screen name="TrainStatus" component={TrainRunningScreen} />
-            <Stack.Screen name="FindTrains" component={FindTrainsScreen} />
-            <Stack.Screen name="SeatAvailability" component={SeatAvailability} />
+            <Stack.Screen name="Check PNR" component={PNRCheckScreen} />
+            <Stack.Screen name="Train Status" component={TrainRunningScreen} />
+            <Stack.Screen name="Find Trains" component={FindTrainsScreen} />
+            <Stack.Screen name="Seat Availability" component={SeatAvailability} />
         </Stack.Navigator>
     );
 };

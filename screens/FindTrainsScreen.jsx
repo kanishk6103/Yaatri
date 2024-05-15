@@ -53,8 +53,8 @@ export default function FindTrainsScreen({ navigation }) {
     };
 
     return (
-        <View className="h-screen bg-black px-6">
-            <View className="">
+        <View className="h-screen bg-black">
+            <View className="px-6">
                 <View className="flex flex-col space-y-2 justify-evenly my-2">
                     <View>
                         <InputFindTrains label={"From"} placeholder={"Enter source station.."} type={"Text"} value={fromValue} onChangeText={(text) => setFromValue(text.toUpperCase())} />
@@ -71,13 +71,13 @@ export default function FindTrainsScreen({ navigation }) {
                     <InputFindTrains label={"Date of Journey"} placeholder={"Enter Date of Journey..."} type={"Date"} onDateChange={handleDateChange} />
                 </View>
             </View>
-
-            <SearchButton title={"Search Trains"} onPress={searchTrains} />
-
-            <ScrollView className="mt-2 mb-24">
+            <View className="px-6">
+                <SearchButton title={"Search Trains"} onPress={searchTrains} />
+            </View>
+            <ScrollView className="mt-2 mb-24 w-full">
                 {
                     data ? (data.map((singleData, index) => {
-                        return <SearchResult data={singleData} key={index} />
+                        return <SearchResult data={singleData} nav={navigation} key={index} />
                     })) : (<View className="flex items-center justify-center my-12"><Text className="text-LightDark text-xs font-black">Your search results will appear here.</Text></View>)
                 }
             </ScrollView>

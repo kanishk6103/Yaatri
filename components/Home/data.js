@@ -9,28 +9,28 @@ data = [
         name: "Check PNR Status",
         description: "Find train information through PNR",
         svg: <PNR />,
-        navigate: "PNR",
+        navigate: "Check PNR",
     },
     {
         sno: 2,
         name: "Train Running Status",
         description: "Live train status",
         svg: <TrainLiveStatus />,
-        navigate: "TrainStatus",
+        navigate: "Train Status",
     },
     {
         sno: 3,
         name: "Seat Availability",
         description: "Find vacant seats in a jiffy",
         svg: <Seat />,
-        navigate: "SeatAvailability",
+        navigate: "Seat Availability",
     },
     {
         sno: 4,
         name: "Find Trains between Stations",
         description: "Find trains in an instant",
         svg: <FindTrains />,
-        navigate: "FindTrains",
+        navigate: "Find Trains",
     },
 ];
 

@@ -5,8 +5,7 @@ import LiveStatus from "../components/TrainRunningStatus/LiveStatus.jsx";
 import InputFindTrains from "../components/FindTrains/InputFindTrains"
 import SearchButton from "../components/FindTrains/SearchButton.jsx";
 import { convertCurrentDate, differenceFromCurrent } from "../utils/dateConverter.js";
-import { sampleData } from "../components/TrainRunningStatus/sampleData.js"
-import { scheduleSample } from "../components/TrainRunningStatus/scheduleSample.js";
+import { useRoute } from "@react-navigation/native"
 const TrainRunningScreen = ({ navigation }) => {
     const [data, setData] = useState(null)
     const [scheduleData, setScheduleData] = useState(null)
@@ -27,13 +26,16 @@ const TrainRunningScreen = ({ navigation }) => {
         setStartDay(difference);
         // console.log(difference);
     };
+
+    // const route = useRoute();
+
     const searchTrains = async () => {
         if ((trainNumber.length === 0) || (startDay.length === 0)) return;
         const url = `https://irctc1.p.rapidapi.com/api/v1/liveTrainStatus?trainNo=${trainNumber}&startDay=${startDay}`;
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': `API_KEY`,
+                'X-RapidAPI-Key': ``,
                 'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
             }
         };
@@ -54,7 +56,7 @@ const TrainRunningScreen = ({ navigation }) => {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'API_KEY',
+                'X-RapidAPI-Key': '',
                 'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
             }
         };
@@ -69,7 +71,7 @@ const TrainRunningScreen = ({ navigation }) => {
         }
 
     }
-
+    // if (route.params) { setTrainNumber(route.params?.paramKey); searchTrains(); getSchedule() }
     return (
         <View className="w-full h-full bg-Background py-2 px-6">
             <View className="h-full">
