@@ -8,7 +8,8 @@ import { convertCurrentDate, differenceFromCurrent } from "../utils/dateConverte
 import { sampleData } from "../components/TrainRunningStatus/sampleData.js"
 import { scheduleSample } from "../components/TrainRunningStatus/scheduleSample.js";
 const TrainRunningScreen = ({ navigation }) => {
-    const [data, setData] = useState(scheduleSample.data)
+    const [data, setData] = useState(null)
+    const [scheduleData, setScheduleData] = useState(null)
     const [clicked, setClicked] = useState(true);
     const [startDay, setStartDay] = useState(0)
     const handleClick = () => {
@@ -32,7 +33,7 @@ const TrainRunningScreen = ({ navigation }) => {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': ``,
+                'X-RapidAPI-Key': `API_KEY`,
                 'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
             }
         };
@@ -47,6 +48,28 @@ const TrainRunningScreen = ({ navigation }) => {
         }
     }
 
+    const getSchedule = async () => {
+        if (trainNumber.length === 0) return;
+        const url = `https://irctc1.p.rapidapi.com/api/v1/getTrainSchedule?trainNo=${trainNumber}`;
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'API_KEY',
+                'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+            }
+        };
+
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            setScheduleData(result.data)
+            console.log(result);
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+
     return (
         <View className="w-full h-full bg-Background py-2 px-6">
             <View className="h-full">
@@ -55,8 +78,8 @@ const TrainRunningScreen = ({ navigation }) => {
                 </Text> */}
                 <InputFindTrains label={"Train Number"} placeholder={"Enter train number..."} type={"Number"} value={trainNumber} onChangeText={(text) => setTrainNumber(text)} />
                 <InputFindTrains label={"Train Start Date"} placeholder={"Select start date..."} type={"Date"} value={date} onDateChange={handleDateChange} />
-                <SearchButton title={"Search"} onPress={searchTrains} />
-                <LiveStatus data={data} />
+                <SearchButton title={"Search"} onPress={() => { searchTrains(); getSchedule() }} />
+                <LiveStatus data={data} scheduleData={scheduleData} />
             </View>
         </View>
     );
