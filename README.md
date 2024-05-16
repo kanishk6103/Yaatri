@@ -4,7 +4,7 @@
 
 Yaatri is a mobile application designed to provide users with essential features related to train travel. It offers functionalities such as finding trains between two stations, checking PNR status, and tracking live train status. This documentation serves as a guide to understand the project structure, functionalities, and usage. This application is developed using react native (expo).
 
-![Home Screen Image]([https://ibb.co/qNz3yPQ](https://i.ibb.co/1r3tvwW/Screenshot-2024-05-16-121146.png))
+![Home Screen Image](https://i.ibb.co/1r3tvwW/Screenshot-2024-05-16-121146.png)
 
 ### Table of Contents
 
