@@ -8,15 +8,15 @@ Yaatri is a mobile application designed to provide users with essential features
 
 ### Table of Contents
 
-- [Installation](/RailYaatri/README.md#installation)
-- [Usage](/RailYaatri/README.md#usage)
-  - [Finding Trains](/RailYaatri/README.md#finding-trains)
-  - [PNR Status](/RailYaatri/README.md#pnr-status)
-  - [Live Train Status](/RailYaatri/README.md#live-train-status)
-- [Project Structure](/RailYaatri/README.md#project-structure)
-- [Dependencies](/RailYaatri/README.md#dependencies)
-- [Contributing](/RailYaatri/README.md#contributing)
-- [License](/RailYaatri/README.md#license)
+- [Installation](/README.md#installation)
+- [Usage](/README.md#usage)
+  - [Finding Trains](/README.md#finding-trains)
+  - [PNR Status](/README.md#pnr-status)
+  - [Live Train Status](/README.md#live-train-status)
+- [Project Structure](/README.md#project-structure)
+- [Dependencies](/README.md#dependencies)
+- [Contributing](/README.md#contributing)
+- [License](/README.md#license)
 
 ### Installation
 
