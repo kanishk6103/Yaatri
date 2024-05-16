@@ -4,7 +4,7 @@
 
 Yaatri is a mobile application designed to provide users with essential features related to train travel. It offers functionalities such as finding trains between two stations, checking PNR status, and tracking live train status. This documentation serves as a guide to understand the project structure, functionalities, and usage. This application is developed using react native (expo).
 
-![Home Screen Image](https://api.cloudinary.com/v1_1/dhgf8eial/image/download?api_key=635214756972437&format=jpg&public_id=Yaatri%2FScreenshot_2024-05-16_121146_tlmufp&signature=8c2b1c6dd4c4f9d98c92196ca12d30b3c4b7e949&timestamp=1715844911&transformation=fl_preserve_transparency&type=upload](https://asset.cloudinary.com/dhgf8eial/82312b22cfe96e35a02f48e86381b660](https://api.cloudinary.com/v1_1/dhgf8eial/image/download?api_key=735728596942656&format=jpg&public_id=Yaatri%2FScreenshot_2024-05-16_121146_tlmufp&signature=608156a54d4f9b184375b6f925caf8fa0e55d959&timestamp=1715850545&transformation=fl_preserve_transparency&type=upload)
+![Home Screen Image](https://ibb.co/qNz3yPQ)
 
 ### Table of Contents
 
@@ -55,9 +55,9 @@ Yaatri provides the following functionalities:
 
   Users can search for trains between two stations by providing the source and destination station codes. The application fetches relevant train information from the database and displays it to the user, like the train name, date and time of arrival, departure at the source station and at the destination station. User can also press a live status button to track the current location of that train.
 
-  ![Finding Trains Page](https://api.cloudinary.com/v1_1/dhgf8eial/image/download?api_key=735728596942656&format=jpg&public_id=Yaatri%2FFind1_ljddae&signature=d01a59879f702734ba1f1e52e5981496b80fcf4c&timestamp=1715845044&transformation=fl_preserve_transparency&type=upload)
+  ![Finding Trains Page](https://ibb.co/YRTGMm7)
 
-  ![Finding Trains Page 2](https://api.cloudinary.com/v1_1/dhgf8eial/image/download?api_key=735728596942656&format=jpg&public_id=Yaatri%2FFind2_si0368&signature=db2dc6c66689f3ed86fa1cf7de3e5bf1bd7024fe&timestamp=1715845090&transformation=fl_preserve_transparency&type=upload)
+  ![Finding Trains Page 2](https://ibb.co/rb7cqSp)
 
 - #### **PNR Status**
 
@@ -69,9 +69,9 @@ Yaatri provides the following functionalities:
 
   Users can track the live status of a specific train by entering its train number. The application fetches live tracking data from the server and displays it to the user, including current location, estimated arrival time, and delays if any.
 
-  ![Live Train Status Page 1](https://api.cloudinary.com/v1_1/dhgf8eial/image/download?api_key=735728596942656&format=jpg&public_id=Yaatri%2FTrainLive1_b64om7&signature=d2eac1c43e626e8b8af369601eb4ddd9aab44527&timestamp=1715845253&transformation=fl_preserve_transparency&type=upload)
+  ![Live Train Status Page 1](https://ibb.co/m40wzwQ)
 
-  ![Live Train Status Page 2](https://api.cloudinary.com/v1_1/dhgf8eial/image/download?api_key=735728596942656&format=jpg&public_id=Yaatri%2FTrainLive3_klbp2c&signature=940f5a26e5a872f6718ce6d0bca8019d8117bf8f&timestamp=1715845308&transformation=fl_preserve_transparency&type=upload)
+  ![Live Train Status Page 2](https://ibb.co/VThh3yc)
 
 ### Project Structure
 
