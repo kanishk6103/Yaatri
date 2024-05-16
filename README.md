@@ -63,7 +63,7 @@ Yaatri provides the following functionalities:
 
   Users can check the PNR status of their booked tickets by entering their PNR number. The application retrieves real-time PNR status information from the server and presents it to the user.
 
-  ![PNR Page](https://api.cloudinary.com/v1_1/dhgf8eial/image/download?api_key=735728596942656&format=jpg&public_id=Yaatri%2FPNR_ybavmi&signature=d6f030a9010aa70b19b15e27d10aaade2707ef32&timestamp=1715845140&transformation=fl_preserve_transparency&type=upload)
+  ![PNR Page](https://res.cloudinary.com/dk3rw649k/image/upload/fl_preserve_transparency/v1715849899/Rail%20App%20-%20Yaatri/PNR_Check_lmtryp.jpg?_s=public-apps)
 
 - #### **Live Train Status**
 
