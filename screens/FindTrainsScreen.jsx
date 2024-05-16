@@ -33,7 +33,7 @@ export default function FindTrainsScreen({ navigation }) {
         const options = {
             method: "GET",
             headers: {
-                "X-RapidAPI-Key": `5c5b4a5b67mshe87e27640303d24p1c4638jsn0a2229b45028`,
+                "X-RapidAPI-Key": `77b801c4e5mshe9b831b564a9b17p163cb1jsn8e147967bb2f`,
                 "X-RapidAPI-Host": "irctc1.p.rapidapi.com",
             },
         };
