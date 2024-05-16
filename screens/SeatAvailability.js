@@ -4,13 +4,9 @@ import React, { Component } from "react";
 export class SeatAvailability extends Component {
     render() {
         return (
-            <View className="flex justify-center items-center w-screen h-screen bg-black">
-                <Text className="text-4xl text-white">
-                    (Never) Coming{" "}
-                    <Text style={{ textDecorationStyle: "strikethrough" }}>
-                        Soon
-                    </Text>
-                    ....
+            <View className="flex justify-center items-center h-full bg-black">
+                <Text className="text-lg text-Light font-bold">
+                    This feature has been scraped.
                 </Text>
             </View>
         );
