@@ -4,7 +4,7 @@
 
 Yaatri is a mobile application designed to provide users with essential features related to train travel. It offers functionalities such as finding trains between two stations, checking PNR status, and tracking live train status. This documentation serves as a guide to understand the project structure, functionalities, and usage. This application is developed using react native (expo).
 
-![Home Screen Image](https://ibb.co/qNz3yPQ)
+![Home Screen Image]([https://ibb.co/qNz3yPQ](https://i.ibb.co/1r3tvwW/Screenshot-2024-05-16-121146.png))
 
 ### Table of Contents
 
@@ -55,9 +55,9 @@ Yaatri provides the following functionalities:
 
   Users can search for trains between two stations by providing the source and destination station codes. The application fetches relevant train information from the database and displays it to the user, like the train name, date and time of arrival, departure at the source station and at the destination station. User can also press a live status button to track the current location of that train.
 
-  ![Finding Trains Page](https://ibb.co/YRTGMm7)
+  ![Finding Trains Page](https://i.ibb.co/Tvq5S6B/Find1.png)
 
-  ![Finding Trains Page 2](https://ibb.co/rb7cqSp)
+  ![Finding Trains Page 2](https://i.ibb.co/yhfYK1k/Find2.png)
 
 - #### **PNR Status**
 
@@ -69,9 +69,9 @@ Yaatri provides the following functionalities:
 
   Users can track the live status of a specific train by entering its train number. The application fetches live tracking data from the server and displays it to the user, including current location, estimated arrival time, and delays if any.
 
-  ![Live Train Status Page 1](https://ibb.co/m40wzwQ)
+  ![Live Train Status Page 1](https://i.ibb.co/fH9505m/Train-Live1.png)
 
-  ![Live Train Status Page 2](https://ibb.co/VThh3yc)
+  ![Live Train Status Page 2](https://i.ibb.co/QMqqXB3/Train-Live3.png)
 
 ### Project Structure
 
