@@ -3,6 +3,7 @@ import React from "react";
 import StatusCard from "./StatusCard";
 import TrainStatusInfo from "../../assets/Components/TrainStatusInfo";
 import { useNavigation } from "@react-navigation/native";
+import { formatDate } from "../../utils/dateConverter";
 const ResultBox = ({ result }) => {
     const DummyData = result;
     const nav = useNavigation();
@@ -24,33 +25,13 @@ const ResultBox = ({ result }) => {
     if (!result) {
         return;
     }
-    const myString = DummyData.data.Duration;
+    const myString = DummyData?.data?.Duration;
     const [hour, minute] = myString.split(":");
-    var days = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-    ];
-    var months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ];
-    var sourceData = new Date(DummyData.data.SourceDoj);
-    var destinationData = new Date(DummyData.data.DestinationDoj);
+
+    var sourceData = DummyData?.data?.SourceDoj;
+    console.log(sourceData);
+    var destinationData = DummyData?.data?.DestinationDoj;
+    console.log(destinationData);
     return (
         <View className="w-full mx-0 px-0 shrink-0 rounded-3xl bg-Dark">
             <View className="flex flex-row justify-between items-center py-1 px-2 gap-1 my-2 mx-1">
@@ -77,11 +58,7 @@ const ResultBox = ({ result }) => {
                         {DummyData.data.BoardingStationName}
                     </Text>
                     <Text className="text-[10px] font-normal text-SecondaryFont">
-                        {`${
-                            days[sourceData.getDay()]
-                        }, ${sourceData.getDate()} ${
-                            months[sourceData.getMonth()]
-                        }`}
+                        {` ${formatDate(sourceData)}`}
                     </Text>
                 </View>
                 <View className="flex flex-col items-start justify-center">
@@ -97,11 +74,7 @@ const ResultBox = ({ result }) => {
                         {DummyData.data.ReservationUptoName}
                     </Text>
                     <Text className="text-[10px] font-normal text-SecondaryFont">
-                        {`${
-                            days[destinationData.getDay()]
-                        }, ${destinationData.getDate()} ${
-                            months[destinationData.getMonth()]
-                        }`}
+                        {`${formatDate(destinationData)}`}
                     </Text>
                 </View>
             </View>
