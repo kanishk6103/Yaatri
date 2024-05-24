@@ -20,7 +20,7 @@ const PNRCheckScreen = ({ navigation }) => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": `77b801c4e5mshe9b831b564a9b17p163cb1jsn8e147967bb2f`,
+        "X-RapidAPI-Key": ``,
         "X-RapidAPI-Host": "irctc1.p.rapidapi.com",
       },
     };
