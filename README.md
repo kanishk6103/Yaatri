@@ -128,6 +128,9 @@ The React Native Train Tracker application utilizes the following key dependenci
 
 Contributions to Yaatri are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request on GitHub.
 
+#### Note:
+To make the API work, insert your irctc rapid API key in individual screen codes, since we couldn't find a workaround for dotenv not working on the react native environment.
+
 ### License
 
 Yaatri is licensed under the MIT License.
