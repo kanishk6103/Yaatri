@@ -21,11 +21,6 @@ export default function FindTrainsScreen({ navigation }) {
         setToValue(temp);
     };
 
-    // useEffect(() => { }, [])
-    //
-
-    //
-
     const searchTrains = async () => {
         if (fromValue.length === 0 || toValue.length === 0 || date.length === 0)
             return;
@@ -33,7 +28,7 @@ export default function FindTrainsScreen({ navigation }) {
         const options = {
             method: "GET",
             headers: {
-                "X-RapidAPI-Key": `77b801c4e5mshe9b831b564a9b17p163cb1jsn8e147967bb2f`,
+                "X-RapidAPI-Key": ``,
                 "X-RapidAPI-Host": "irctc1.p.rapidapi.com",
             },
         };
